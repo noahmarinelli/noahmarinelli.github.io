@@ -1,18 +1,23 @@
 ---
 layout: post
-title: Sample blog post
-subtitle: Each post also has a subtitle
-gh-repo: daattali/beautiful-jekyll
-gh-badge: [star, fork, follow]
-tags: [test]
+title: Election Day / Beware the Hot Pumpkin
+subtitle: Which holiday is spookier this year?
+tags: [Riddler]
 comments: true
 ---
 
-This is a demo post to show you how to write blog posts with markdown.  I strongly encourage you to [take 5 minutes to learn how to write in markdown](https://markdowntutorial.com/) - it'll teach you how to transform regular text into bold/italics/headings/tables/etc.
+##Riddler Express
 
-**Here is some bold text**
+While waiting in line to vote early last week, I overheard a discussion between election officials. Apparently, there may have been a political sign that was within 100 feet of the polling place, against [New York State law](https://www.nysenate.gov/legislation/laws/EDN/2031-A).
 
-## Here is a secondary heading
+This got me thinking. Suppose a polling site is a square building whose sides are 100 feet in length. An election official takes a string that is also 100 feet long and ties one end to a door located in the middle of one of the building’s sides. She then holds the other end of the string in her hand.
+
+What’s the area of the region outside of the building she can reach while holding the string?
+ 
+**Riddler Express Solution:**
+This puzzle is both easier to understand and easier to solve by just drawing it out, so excuse my poor PowerPoint skills and let's examine the following diagram to see how the election official draws out their "No Sign Zone"
+
+## Here is a secondary hand eazeading
 
 Here's a useless table:
 
