@@ -26,8 +26,8 @@ The puzzle gets interesting when the election official reaches the points on eit
 The area of the "No Sign Zone" (in square feet) is then just the sum of these three areas:
 
 $$\frac{\pi * 100^2} {2} + \frac{\pi * 50^2} {4} + \frac{\pi * 50^2} {4} \\
-\approx 15,708 + 3,927 + 3,927 \\
-\approx 23,562  $$
+\approx 15708 + 1964 + 1964 \\
+\approx 19635  $$
 
 
 ## Riddler Classic
