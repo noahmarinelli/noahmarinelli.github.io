@@ -55,7 +55,7 @@ Note that as 59, 60, and 61 are coprime, our answer will be in the form $$ N = n
 Also note that we have arrived at a system of three modular equations, a perfect time to apply the [Chinese Remainder Theorem] (https://en.wikipedia.org/wiki/Chinese_remainder_theorem), a fascinating result in number theory. The Chinese Remainder Theorem basically states that if you have a list of n integers ($$x_{1}, x_{2}, ..., x_{n}$$) with a GCD of 1, an and a second list of n integers ($$y_{1}, y_{2}, ..., y_{n}$$) such that every element of the second set is less than every element of the first set, there is one and only one integer x that is both less than the product of the n integers in the first list and equal to $$y_{i}(mod x{i})$$ for all 0<i<=n. This guarantees that there must exist one and only one $$ N < 59*60*61 = 212280 $$.
 
 I couldn't figure out how to solve this quickly and analytically, so let's just brute force it in R:
-```{r}
+```R
 i <- 0
 test <- FALSE
 
@@ -86,71 +86,7 @@ while (test == FALSE) {
 }
 print(i)
 ```
+This returns 136,232, which is both lower than our upper bound guarenteed by the CRT and can be verified by hand.
 
-
-
-_
-## Here is a secondary hand eazeading
-
-Here's a useless table:
-
-| Number | Next number | Previous number |
-| :------ |:--- | :--- |
-| Five | Six | Four |
-| Ten | Eleven | Nine |
-| Seven | Eight | Six |
-| Two | Three | One |
-
-
-How about a yummy crepe?
-
-![Crepe](https://s3-media3.fl.yelpcdn.com/bphoto/cQ1Yoa75m2yUFFbY2xwuqw/348s.jpg)
-
-It can also be centered!
-
-![Crepe](https://s3-media3.fl.yelpcdn.com/bphoto/cQ1Yoa75m2yUFFbY2xwuqw/348s.jpg){: .mx-auto.d-block :}
-
-Here's a code chunk:
-
-~~~
-var foo = function(x) {
-  return(x + 5);
-}
-foo(3)
-~~~
-
-And here is the same code with syntax highlighting:
-
-```javascript
-var foo = function(x) {
-  return(x + 5);
-}
-foo(3)
-```
-
-And here is the same code yet again but with line numbers:
-
-{% highlight javascript linenos %}
-var foo = function(x) {
-  return(x + 5);
-}
-foo(3)
-{% endhighlight %}
-
-## Boxes
-You can add notification, warning and error boxes like this:
-
-### Notification
-
-{: .box-note}
-**Note:** This is a notification box.
-
-### Warning
-
-{: .box-warning}
-**Warning:** This is a warning box.
-
-### Error
-
-{: .box-error}
-**Error:** This is an error box.
+**Riddler Classic Extra Credit Solution:**
+Again, let's just simulate this in R to determine a winner:
