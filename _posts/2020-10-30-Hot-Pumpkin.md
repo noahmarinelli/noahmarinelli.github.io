@@ -25,7 +25,7 @@ The puzzle gets interesting when the election official reaches the points on eit
 
 The area of the "No Sign Zone" is then just the sum of these three areas:
 
-$$\fract{$\pi$ * 100^2} {2} + fract{$\pi$ * 50^2} {4} + fract{$\pi$ * 50^2} {4} \\
+$$\frac{$\pi$ * 100^2} {2} + fract{$\pi$ * 50^2} {4} + fract{$\pi$ * 50^2} {4} \\
 $\approx$ 15,708 + 3,927 + 3,927 = 23,562 $$
 
 
