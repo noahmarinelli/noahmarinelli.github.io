@@ -17,8 +17,7 @@ What’s the area of the region outside of the building she can reach while hold
 **Riddler Express Solution:**
 This puzzle is both easier to understand and easier to solve by just drawing it out, so excuse my poor PowerPoint skills and let's examine the following diagram to see how the election official draws out their "No Sign Zone"
 
-
-![Polling Place](https://github.com/noahmarinelli/noahmarinelli.github.io/blob/master/RiddlerVotingCircle.jpg){: .mx-auto.d-block :}
+><center><img src="/imgage/RiddlerVotingCircle.jpeg" alt="No Sign Zone" style="width: 300px"/></center>
 
 We can imagine our election official walking from the door of the polling place out 100 feet with their string, and sweeping left to right to form the dark grey semicircle with radius 100 feet directly south of the polling place.
 
