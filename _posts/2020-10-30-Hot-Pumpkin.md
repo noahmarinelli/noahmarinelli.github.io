@@ -50,12 +50,42 @@ N mod 61 = 18 + 1 = 19
 N mod 60 = 31 + 1 = 32
 N mod 59 = 0 + 1 = 1
 
-Note that as 59, 60, and 61 are coprime, our answer will be in the form $$ N = k mod(59*60*51) $$
+Note that as 59, 60, and 61 are coprime, our answer will be in the form $$ N = n mod(59*60*51) $$ or $$ n + k*(59*60*61)$$ where k is a whole number.
 
+Also note that we have arrived at a system of three modular equations, a perfect time to apply the [Chinese Remainder Theorem] (https://en.wikipedia.org/wiki/Chinese_remainder_theorem), a fascinating result in number theory. The Chinese Remainder Theorem basically states that if you have a list of n integers ($$x_{1}, x_{2}, ..., x_{n}$$) with a GCD of 1, an and a second list of n integers ($$y_{1}, y_{2}, ..., y_{n}$$) such that every element of the second set is less than every element of the first set, there is one and only one integer x that is both less than the product of the n integers in the first list and equal to $$y_{i}(mod x{i})$$ for all 0<i<=n. This guarantees that there must exist one and only one $$ N < 59*60*61 = 212280 $$.
 
+I couldn't figure out how to solve this quickly and analytically, so let's just brute force it in R:
+```R
+i <- 0
+test <- FALSE
 
-Note: Maybe not CRT.
-We arrive at a system of three modular equations, a perfect time to apply the [Chinese Remainder Theorem] (https://en.wikipedia.org/wiki/Chinese_remainder_theorem), a fascinating result in number theory. The Chinese Remainder Theorem basically states that if you have a list of n integers ($$x_{1}, x_{2}, ..., x_{n}$$) with a GCD of 1, an and a second list of n integers ($$y_{1}, y_{2}, ..., y_{n}$$) such that every element of the second set is less than every element of the first set, there is one and only one integer x that is both less than the product of the n integers in the first list and equal to $$y_{i}(mod x{i})$$ for all 0<i<=n. The ty
+while (test == FALSE) {
+  
+  i = i + 1
+  
+  test <- (
+    (i %% 61) -19 ==
+    (i %% 60) -32
+      &
+    (i %% 61) -19 ==
+    (i %% 59 -1) 
+      &
+    (i %% 60) -32 ==
+    (i %% 59 -1)  
+      &
+    (i %% 61) -19 ==
+    0
+      &
+    (i %% 60) -32 ==
+    0
+      &
+    (i %% 59 -1)  ==
+    0
+    )
+
+}
+print(i)
+```
 
 
 
