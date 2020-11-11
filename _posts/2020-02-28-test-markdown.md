@@ -6,7 +6,7 @@ tags: [Riddler]
 comments: true
 ---
 
-##Riddler Express
+## Riddler Express
 
 While waiting in line to vote early last week, I overheard a discussion between election officials. Apparently, there may have been a political sign that was within 100 feet of the polling place, against [New York State law](https://www.nysenate.gov/legislation/laws/EDN/2031-A).
 
@@ -20,6 +20,13 @@ This puzzle is both easier to understand and easier to solve by just drawing it 
 
 ![Polling Place](https://github.com/noahmarinelli/noahmarinelli.github.io/blob/master/RiddlerVotingCircle.jpg){: .mx-auto.d-block :}
 
+We can imagine our election official walking from the door of the polling place out 100 feet with their string, and sweeping left to right to form the dark grey semicircle with radius 100 feet directly south of the polling place.
+
+The puzzle gets interesting when the election official reaches the points on either end of this semicircle, directly parallel to the southern wall of the polling place. If they attempt to continue to trace the semicircle, their string will run into the corner of the square polling place. For any area north of the southern wall of the polling place, we can see that the results are analogous to the election official tying a 50 foot string to the corner of the polling place, rather than a 100 foot string to the center of the southern wall. This will lead the election official to trace out two light gray semicircles with radius 50 feet.
+
+The area of the "No Sign Zone" is then just the sum of these three areas:
+
+$$\int_\Omega \nabla u \cdot \nabla v~dx = \int_\Omega fv~dx$$
 
 
 ## Here is a secondary hand eazeading
